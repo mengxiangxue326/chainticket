@@ -1,0 +1,46 @@
+# Configuration template for the ChainTicket application.
+# Copy this file to config.yaml and fill in local/demo private keys before running.
+
+# Network selects the active profile below.
+network: anvil
+
+networks:
+  anvil:
+    url: ws://127.0.0.1:8545
+    chainId: 31337
+    blockSeconds: 1
+  sepolia:
+    urlEnv: SEPOLIA_RPC_URL
+    chainId: 11155111
+    blockSeconds: 12
+
+# Set on the factory at deployment.
+# sweepDelayBlocks is how many blocks after an event's end the platform must wait before sweeping unclaimed refunds.
+platform:
+  sweepDelayBlocks: 600
+
+# Demo accounts used by the local seed script.
+# Do not commit real keys in config.yaml.
+accounts:
+  platform:
+    privateKey: "replace-with-local-platform-private-key"
+    password: demo123
+  org:
+    privateKey: "replace-with-local-organizer-private-key"
+    password: demo123
+  user1:
+    privateKey: "replace-with-local-user1-private-key"
+    password: demo123
+  user2:
+    privateKey: "replace-with-local-user2-private-key"
+    password: demo123
+  user3:
+    privateKey: "replace-with-local-user3-private-key"
+    password: demo123
+  val:
+    privateKey: "replace-with-local-validator-private-key"
+    password: demo123
+
+# The shared off-chain database
+database:
+  path: tmp/chainticket.db

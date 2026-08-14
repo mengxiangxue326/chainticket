@@ -1,0 +1,14 @@
+# All runtime-generated files are kept
+tmp/
+
+# Local configuration may contain demo/private keys
+config.yaml
+
+# Installed dependencies
+node_modules/
+lib/
+
+# Submission only
+*.txt
+*.sh
+*.pptx
